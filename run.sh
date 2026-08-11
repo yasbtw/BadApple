@@ -23,17 +23,21 @@ quit() {
 }
 
 start() {
-mpg123 -q --no-control "$2" &
-if [[ ! -d "$1" ]]; then
+  if command -v pw-play &> /dev/null; then
+    pw-play "$2" &
+  elif command -v mpg123 &> /dev/null; then
+    mpg123 -q --no-control "$2" &
+  fi
+  if [[ ! -d "$1" ]]; then
     echo "[!] Ascii directory not found at $1"
     exit 1
-fi
-for file in "$1"/*; do
+  fi
+  for file in "$1"/*; do
     tput cup 0 0
     cat $file
     sleep 0.028
     tput ed
-done
+  done
 }
 
 start "assets/ascii" "assets/bad_apple.mp3"

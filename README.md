@@ -6,7 +6,7 @@
 
 ## Installation
 
-```
+```bash
 git clone https://github.com/yasbtw/BadApple.git
 cd BadApple
 ./run.sh
