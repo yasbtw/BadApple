@@ -29,7 +29,5 @@ Just run the script and watch:
 
 The script plays audio using whichever tool is available:
 
-pw-play — used automatically if your distro runs PipeWire as its default audio server and has the PipeWire utility Most distros ship with this already so there's often nothing extra to install  
-mpg123 — used as a fallback if pw-play isn't available. Install it with your package manager
-
-github.com/@yasbtw
+**pw-play** — used automatically if your distro runs PipeWire as its default audio server and has the PipeWire utility Most distros ship with this already so there's often nothing extra to install  
+**mpg123** — used as a fallback if pw-play isn't available. Install it with your package manager
