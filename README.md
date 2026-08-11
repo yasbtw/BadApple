@@ -1,13 +1,11 @@
-# Bad Apple!!
-
-![Design](assets/output.gif)
-
 ```
 ░█▀▄░█▀█░█▀▄░░░█▀█░█▀█░█▀█░█░░░█▀▀░█░█
 ░█▀▄░█▀█░█░█░░░█▀█░█▀▀░█▀▀░█░░░█▀▀░▀░▀
 ░▀▀░░▀░▀░▀▀░░░░▀░▀░▀░░░▀░░░▀▀▀░▀▀▀░▀░▀
-                    github.com/@yasbtw
 ```
+## Bad Apple!!
+
+![Design](assets/output.gif)  
 
 Bad Apple rendered entirely in ASCII art and played straight in your Linux terminal  
 
