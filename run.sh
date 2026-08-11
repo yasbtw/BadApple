@@ -36,4 +36,4 @@ for file in "$1"/*; do
 done
 }
 
-start "ascii" "bad_apple.mp3"
+start "assets/ascii" "assets/bad_apple.mp3"

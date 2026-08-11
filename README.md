@@ -1,3 +1,3 @@
 # Bad Apple!!
-![Alt Text](output.gif)
+![Alt Text](assets/output.gif)
 
