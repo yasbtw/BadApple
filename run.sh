@@ -10,6 +10,8 @@ read -r -d '' text << 'EOF'
                     github.com/@yasbtw
 EOF
 
+mode="$1"
+
 echo -e "\033[1m$text\e[?1049h"
 tput rmam
 tput civis
@@ -22,6 +24,13 @@ quit() {
   echo -e '\e[?1049l'
 }
 
+render(){
+  tput cup 0 0
+  echo "$1"
+  sleep 0.0282
+  tput ed
+}
+
 start() {
   if command -v pw-play &> /dev/null; then
     pw-play "$2" &
@@ -32,12 +41,19 @@ start() {
     echo "[!] Ascii directory not found at $1"
     exit 1
   fi
-  for file in "$1"/*; do
-    tput cup 0 0
-    cat $file
-    sleep 0.028
-    tput ed
+  if [[ $mode == "ram" ]]; then
+  frames=()
+   for file in "$1"/*; do
+     frames+=("$(<"$file")")
+   done
+   for i in "${!frames[@]}"; do
+        render "${frames[$i]}"
+   done
+  else
+   for file in "$1"/*; do
+    render "$(<"$file")"
   done
+  fi
 }
 
 start "assets/ascii" "assets/bad_apple.mp3"
